@@ -3,7 +3,10 @@
 # Check for Homebrew
 if ! hash brew 2>/dev/null; then
   echo "Installing Homebrew for you."
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/thomasbrosset/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+
 fi
 
 # Make sure we’re using the latest Homebrew.
