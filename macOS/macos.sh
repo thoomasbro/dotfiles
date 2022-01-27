@@ -16,7 +16,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 sudo cp ~/dotfiles/macOS/nsmb.conf /etc/nsmb.conf
 
 # Enable open apps from unidentified developers
-sudo spctl --master-disable
+# sudo spctl --master-disable
 
 ###############################################################################
 # General UI/UX                                                               #
@@ -48,30 +48,30 @@ defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 ###############################################################################
 
 # Enable “natural” (Lion-style) scrolling
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
+# defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Use scroll gesture with the Ctrl (^) modifier key to zoom
-sudo defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-sudo defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+# sudo defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+# sudo defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 
 # Follow the keyboard focus while zoomed in
 sudo defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 2
-defaults write NSGlobalDomain InitialKeyRepeat -int 15
+# defaults write NSGlobalDomain KeyRepeat -int 2
+# defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
 
 # Require password immediately after sleep or screen saver begins
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
+# defaults write com.apple.screensaver askForPassword -int 1
+# defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
@@ -81,10 +81,10 @@ defaults write com.apple.screencapture disable-shadow -bool true
 ###############################################################################
 
 # Show icons for hard drives, servers, and removable media on the desktop
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+# defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+# defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+# defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+# defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -118,7 +118,7 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
 # Enable the warning before emptying the Trash
-defaults write com.apple.finder WarnOnEmptyTrash -bool true
+# defaults write com.apple.finder WarnOnEmptyTrash -bool true
 
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
@@ -132,38 +132,38 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 ###############################################################################
 
 # Enable highlight hover effect for the grid view of a stack (Dock)
-defaults write com.apple.dock mouse-over-hilite-stack -bool true
+# defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
-# Set the icon size of Dock items to 36 pixels
-defaults write com.apple.dock tilesize -int 24
+# # Set the icon size of Dock items to 36 pixels
+# defaults write com.apple.dock tilesize -int 24
 
 # Change minimize/maximize window effect
-defaults write com.apple.dock mineffect -string "genie"
+# defaults write com.apple.dock mineffect -string "genie"
 
 # Minimize windows into their application’s icon
-defaults write com.apple.dock minimize-to-application -bool false
+# defaults write com.apple.dock minimize-to-application -bool false
 
 # Show indicator lights for open applications in the Dock
-defaults write com.apple.dock show-process-indicators -bool true
+# defaults write com.apple.dock show-process-indicators -bool true
 
 # Don’t group windows by application in Mission Control
 # (i.e. use the old Exposé behavior instead)
-defaults write com.apple.dock expose-group-by-app -bool true
+# defaults write com.apple.dock expose-group-by-app -bool true
 
 # Disable Dashboard
-defaults write com.apple.dashboard mcx-disabled -bool true
+# defaults write com.apple.dashboard mcx-disabled -bool true
 
 # Don’t show Dashboard as a Space
-defaults write com.apple.dock dashboard-in-overlay -bool true
+# defaults write com.apple.dock dashboard-in-overlay -bool true
 
 # Don’t automatically rearrange Spaces based on most recent use
-defaults write com.apple.dock mru-spaces -bool false
+# defaults write com.apple.dock mru-spaces -bool false
 
 # Make Dock icons of hidden applications translucent
-defaults write com.apple.dock showhidden -bool true
+# defaults write com.apple.dock showhidden -bool true
 
 # Don’t show recent applications in Dock
-defaults write com.apple.dock show-recents -bool false
+# defaults write com.apple.dock show-recents -bool false
 
 ###############################################################################
 # Safari & WebKit                                                             #
@@ -174,28 +174,28 @@ defaults write com.apple.Safari UniversalSearchEnabled -bool false
 defaults write com.apple.Safari SuppressSearchSuggestions -bool true
 
 # Show the full URL in the address bar (note: this still hides the scheme)
-defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+# defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 
 # Prevent Safari from opening ‘safe’ files automatically after downloading
-defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+# defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 
 # Hide Safari’s bookmarks bar by default
-defaults write com.apple.Safari ShowFavoritesBar -bool false
+# defaults write com.apple.Safari ShowFavoritesBar -bool false
 
 # Hide Safari’s sidebar in Top Sites
-defaults write com.apple.Safari ShowSidebarInTopSites -bool false
+# defaults write com.apple.Safari ShowSidebarInTopSites -bool false
 
 # Disable Safari’s thumbnail cache for History and Top Sites
-defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
+# defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
 
 # Enable Safari’s debug menu
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
 # Make Safari’s search banners default to Contains instead of Starts With
-defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
+# defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 
 # Remove useless icons from Safari’s bookmarks bar
-defaults write com.apple.Safari ProxiesInBookmarksBar "()"
+# defaults write com.apple.Safari ProxiesInBookmarksBar "()"
 
 # Enable the Develop menu and the Web Inspector in Safari
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
@@ -206,38 +206,38 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 # Disable AutoFill
-defaults write com.apple.Safari AutoFillFromAddressBook -bool false
-defaults write com.apple.Safari AutoFillPasswords -bool false
-defaults write com.apple.Safari AutoFillCreditCardData -bool false
-defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
+# defaults write com.apple.Safari AutoFillFromAddressBook -bool false
+# defaults write com.apple.Safari AutoFillPasswords -bool false
+# defaults write com.apple.Safari AutoFillCreditCardData -bool false
+# defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
 
 # Warn about fraudulent websites
-defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
+# defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
 
 # Disable plug-ins
-defaults write com.apple.Safari WebKitPluginsEnabled -bool false
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2PluginsEnabled -bool false
+# defaults write com.apple.Safari WebKitPluginsEnabled -bool false
+# defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2PluginsEnabled -bool false
 
 # Disable Java
-defaults write com.apple.Safari WebKitJavaEnabled -bool false
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled -bool false
+# defaults write com.apple.Safari WebKitJavaEnabled -bool false
+# defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled -bool false
 
 # Block pop-up windows
-defaults write com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically -bool false
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaScriptCanOpenWindowsAutomatically -bool false
+# defaults write com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically -bool false
+# defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaScriptCanOpenWindowsAutomatically -bool false
 
 # Enable “Do Not Track”
 defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 
 # Update extensions automatically
-defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
+# defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 
 ###############################################################################
 # Mail                                                                        #
 ###############################################################################
 
 # Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
-defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+# defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 # Disable inline attachments (just show the icons)
 defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
@@ -247,7 +247,7 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 ###############################################################################
 
 # Don’t display the annoying prompt when quitting iTerm
-defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+# defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 ###############################################################################
 # Time Machine                                                                #
@@ -263,7 +263,7 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
 
 # Check for software updates daily, not just once per week
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+# defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 # Download newly available updates in background
 defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
