@@ -127,6 +127,8 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
   OpenWith -bool true \
   Privileges -bool true
 
+# show POSIX path
+# defaults write com.apple.Finder _FXShowPosixPathInTitle -bool true
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
@@ -280,3 +282,10 @@ defaults write com.apple.commerce AutoUpdate -bool true
 
 # Prevent Photos from opening automatically when devices are plugged in
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+
+# expand save dialog
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
+# show current spotlight settings
+# defaults read com.apple.Spotlight
