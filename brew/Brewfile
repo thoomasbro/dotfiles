@@ -16,7 +16,7 @@ brew 'htop'
 # brew 'n'
 brew 'nvm'
 # brew 'php'
-# brew 'postgresql'
+brew 'postgresql'
 brew 'rbenv'
 brew 'redis'
 brew 'screenfetch'
@@ -29,6 +29,9 @@ brew 'webp'
 brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
 brew 'zsh'
+
+brew 'docker-compose'
+brew 'openjdk'
 
 # Casks
 # cask 'chromedriver'

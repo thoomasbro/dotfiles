@@ -28,11 +28,15 @@ This is my dotfiles for my system customizations and to setup my development env
 ## Before starting on Apple M1 Chip
 
 ```bash
-$ softwareupdate --install-rosetta
+$ softwareupdate --install-rosetta --agree-to-license
 ```
 
 Find the Terminal app in your Finder, press `⌘ + i`, check `Open using Rosetta` and reopen the Terminal.
 
+## XCode CLI Tools
+
+You might also want to install XCode CLI Tools. It's possible to install CLI Tools without XCode.
+pkg installer is available on https://developer.apple.com/download/all/
 ## How to use it ?
 
 Clone the project in your home directory :
