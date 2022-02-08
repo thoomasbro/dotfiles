@@ -7,6 +7,7 @@ brew 'ccat' # colorizing cat
 brew 'coreutils'
 brew 'ffmpeg'
 brew 'git-extras'
+brew 'git-lfs'
 brew 'git-open'
 brew 'git-recent'
 brew 'git'
@@ -16,7 +17,7 @@ brew 'htop'
 # brew 'n'
 brew 'nvm'
 # brew 'php'
-brew 'postgresql'
+# brew 'postgresql'
 brew 'rbenv'
 brew 'redis'
 brew 'screenfetch'
@@ -32,6 +33,12 @@ brew 'zsh'
 
 brew 'docker-compose'
 brew 'openjdk'
+brew 'ruby-build' # plugin for rbenv
+brew 'openssl'
+brew 'libpq' # using postgres without installing postgresql formulae
+brew 'smartmontools' # smart utility for SDD
+brew 'shared-mime-info'
+brew 'pyenv'
 
 # Casks
 # cask 'chromedriver'
