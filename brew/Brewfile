@@ -36,6 +36,7 @@ brew 'openjdk'
 brew 'ruby-build' # plugin for rbenv
 brew 'openssl'
 brew 'libpq' # using postgres without installing postgresql formulae
+brew 'gdal'
 brew 'smartmontools' # smart utility for SDD
 brew 'shared-mime-info'
 brew 'pyenv'
