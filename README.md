@@ -37,6 +37,11 @@ Find the Terminal app in your Finder, press `⌘ + i`, check `Open using Rosetta
 
 You might also want to install XCode CLI Tools. It's possible to install CLI Tools without XCode.
 pkg installer is available on https://developer.apple.com/download/all/
+
+## Intellij Idea & OpenJDK
+
+For the system Java wrappers to find installed JDK, symlink it with
+  `sudo ln -sfn /opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk`
 ## How to use it ?
 
 Clone the project in your home directory :
